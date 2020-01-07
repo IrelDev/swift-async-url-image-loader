@@ -8,7 +8,9 @@
 import UIKit
 class ImageLoader: UIImageView {
     func setImage(stringUrlToImage: String?) {
-        guard let stringUrlToImage = stringUrlToImage, let urlToImage = URL(string: stringUrlToImage) else { return }
+        guard let stringUrlToImage = stringUrlToImage, let urlToImage = URL(string: stringUrlToImage) else {
+            return self.image = nil
+        }
         
         if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: urlToImage)) {
             self.image = UIImage(data: cachedResponse.data)
