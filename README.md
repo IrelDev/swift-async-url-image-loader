@@ -37,6 +37,7 @@ Copy ImageLoader.swift into your project <br>
 In Identity inspector of ImageView choose custom class ImageLoader <br>
 
 Create IBOutlet and make sure that your IBOutlet conform to ImageLoader <br>
+
 Call setImage method
 
 ```swift
